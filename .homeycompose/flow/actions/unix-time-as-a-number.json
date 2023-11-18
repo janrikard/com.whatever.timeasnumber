@@ -1,0 +1,17 @@
+{
+  "id": "Unix_Time_As_A_Number",
+  "title": {
+    "en": "Unix time as a number"
+  },
+  "hint": {
+    "en": "Return a tag with current Unix time"
+  }, 
+  "tokens":[
+    {
+      "name": "Current_unix_time_output",
+      "type": "number",
+      "title": { "en": "Current Unix time" },
+      "example": { "en": "915148801" }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Second_As_A_Number",
+  "title": {
+    "en": "Second as a number"
+  },
+  "hint": {
+    "en": "Return a tag with current second(0-59)"
+  }, 
+  "tokens":[
+    {
+      "name": "Current_second_output",
+      "type": "number",
+      "title": { "en": "Current second" },
+      "example": { "en": "23" }
+    }
+  ]
+}

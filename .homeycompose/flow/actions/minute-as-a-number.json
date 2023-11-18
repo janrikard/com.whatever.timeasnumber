@@ -5,7 +5,8 @@
   },
   "hint": {
     "en": "Return a tag with current minute(0-59)"
-  }, "tokens":[
+  }, 
+  "tokens":[
     {
       "name": "Current_minute_output",
       "type": "number",
