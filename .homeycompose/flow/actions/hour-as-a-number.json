@@ -1,0 +1,8 @@
+{
+  "title": {
+    "en": "Hour as a number"
+  },
+  "hint": {
+    "en": "Return a tag with current hour(0-23) "
+  }
+}
