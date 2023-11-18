@@ -1,8 +1,18 @@
 {
+  "id": "Hour_As_A_Number",
   "title": {
     "en": "Hour as a number"
   },
   "hint": {
     "en": "Return a tag with current hour(0-23) "
-  }
+  },
+  "tokens":[
+    {
+      "name": "Current_hour_output",
+      "type": "number",
+      "title": { "en": "Current Hour" },
+      "example": { "en": "5" }
+    }
+
+  ]
 }

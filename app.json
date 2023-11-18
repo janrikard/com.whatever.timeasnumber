@@ -1,3 +1,75 @@
 {
-  "_comment": "This file is generated. Please edit .homeycompose/app.json instead."
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.whatever.timeasnumber",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Time as numbers"
+  },
+  "description": {
+    "en": "Get time as number-tag"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Rikard Nilsson",
+    "email": "janrikard@gmail.com"
+  },
+  "flow": {
+    "actions": [
+      {
+        "id": "Hour_As_A_Number",
+        "title": {
+          "en": "Hour as a number"
+        },
+        "hint": {
+          "en": "Return a tag with current hour(0-23) "
+        },
+        "tokens": [
+          {
+            "name": "Current_hour_output",
+            "type": "number",
+            "title": {
+              "en": "Current Hour"
+            },
+            "example": {
+              "en": "5"
+            }
+          }
+        ]
+      },
+      {
+        "id": "Minute_As_A_Number",
+        "title": {
+          "en": "Minute as a number"
+        },
+        "hint": {
+          "en": "Return a tag with current minute(0-59)"
+        },
+        "tokens": [
+          {
+            "name": "Current_minute_output",
+            "type": "number",
+            "title": {
+              "en": "Current minute"
+            },
+            "example": {
+              "en": "23"
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

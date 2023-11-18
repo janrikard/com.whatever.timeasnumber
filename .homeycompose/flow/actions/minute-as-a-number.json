@@ -1,0 +1,16 @@
+{
+  "id": "Minute_As_A_Number",
+  "title": {
+    "en": "Minute as a number"
+  },
+  "hint": {
+    "en": "Return a tag with current minute(0-59)"
+  }, "tokens":[
+    {
+      "name": "Current_minute_output",
+      "type": "number",
+      "title": { "en": "Current minute" },
+      "example": { "en": "23" }
+    }
+  ]
+}
