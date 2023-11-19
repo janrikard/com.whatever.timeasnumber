@@ -1,6 +1,6 @@
 'use strict';
 
-const kalle = require('luxon');
+const { DateTime } = require('luxon');
 const Homey = require('homey');
 
 class MyApp extends Homey.App {
@@ -13,7 +13,11 @@ class MyApp extends Homey.App {
 
     const hourcard = this.homey.flow.getActionCard('Hour_As_A_Number');
     hourcard.registerRunListener(async (args) => {
-      let hourdate = new Date();
+      
+     
+      let hourdate = new DateTime();
+      //hourdate.fromObject('Europe/Stockholm');
+      
       let current_hour = hourdate.getHours();
       current_hour = current_hour + 1;
       if (current_hour >= 24) {
