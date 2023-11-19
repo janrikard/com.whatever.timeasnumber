@@ -123,6 +123,27 @@
         ]
       },
       {
+        "id": "Month_As_A_Number",
+        "title": {
+          "en": "Month as a number"
+        },
+        "hint": {
+          "en": "Return a tag with current month as a number"
+        },
+        "tokens": [
+          {
+            "name": "Current_month_output",
+            "type": "number",
+            "title": {
+              "en": "Current month"
+            },
+            "example": {
+              "en": "12"
+            }
+          }
+        ]
+      },
+      {
         "id": "Second_As_A_Number",
         "title": {
           "en": "Second as a number"
@@ -202,6 +223,48 @@
             },
             "example": {
               "en": "3"
+            }
+          }
+        ]
+      },
+      {
+        "id": "Year_As_A_Number_2_digit",
+        "title": {
+          "en": "Year as a number (2-digit)"
+        },
+        "hint": {
+          "en": "Return a tag with current year as a number(2-digits)"
+        },
+        "tokens": [
+          {
+            "name": "Current_year2_output",
+            "type": "number",
+            "title": {
+              "en": "Current year"
+            },
+            "example": {
+              "en": "23"
+            }
+          }
+        ]
+      },
+      {
+        "id": "Year_As_A_Number_4_digit",
+        "title": {
+          "en": "Year as a number (4-digit)"
+        },
+        "hint": {
+          "en": "Return a tag with current year as a number(4-digits)"
+        },
+        "tokens": [
+          {
+            "name": "Current_year4_output",
+            "type": "number",
+            "title": {
+              "en": "Current year"
+            },
+            "example": {
+              "en": "2023"
             }
           }
         ]

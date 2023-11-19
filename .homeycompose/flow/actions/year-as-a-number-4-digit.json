@@ -1,0 +1,21 @@
+{
+  "id": "Year_As_A_Number_4_digit",
+  "title": {
+    "en": "Year as a number (4-digit)"
+  },
+  "hint": {
+    "en": "Return a tag with current year as a number(4-digits)"
+  },
+  "tokens": [
+    {
+      "name": "Current_year4_output",
+      "type": "number",
+      "title": {
+        "en": "Current year"
+      },
+      "example": {
+        "en": "2023"
+      }
+    }
+  ]
+}

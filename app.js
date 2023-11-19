@@ -109,6 +109,38 @@ class MyApp extends Homey.App {
         Current_day_of_month_output: current_dayofmonth
       }
     })
+
+    const monthcard = this.homey.flow.getActionCard('Month_As_A_Number');
+    monthcard.registerRunListener(async (args) => {
+      let monthdate = new Date();
+      let current_month = monthdate.getMonth();
+      current_month = current_month + 1;
+      return {
+        Current_month_output: current_month
+      }
+    })
+
+
+    const year2card = this.homey.flow.getActionCard('Year_As_A_Number_2_digit');
+    year2card.registerRunListener(async (args) => {
+      let year2date = new Date();
+      let current_year2 = year2date.getFullYear();
+      //this will not work after the year 2199
+      if (current_year2 < 2100) {current_year2 = current_year2 - 2000; }
+      else { current_year2 = current_year2 - 2100; }
+      return {
+        Current_year2_output: current_year2
+      }
+    })
+
+    const year4card = this.homey.flow.getActionCard('Year_As_A_Number_4_digit');
+    year4card.registerRunListener(async (args) => {
+      let year4date = new Date();
+      let current_year4 = year4date.getFullYear();
+      return {
+        Current_year4_output: current_year4
+      }
+    })
   }
 
 }

@@ -1,0 +1,21 @@
+{
+  "id": "Month_As_A_Number",
+  "title": {
+    "en": "Month as a number"
+  },
+  "hint": {
+    "en": "Return a tag with current month as a number"
+  },
+  "tokens": [
+    {
+      "name": "Current_month_output",
+      "type": "number",
+      "title": {
+        "en": "Current month"
+      },
+      "example": {
+        "en": "12"
+      }
+    }
+  ]
+}
