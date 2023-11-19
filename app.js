@@ -14,9 +14,9 @@ class MyApp extends Homey.App {
     hourcard.registerRunListener(async (args) => {
       let hourdate = new Date();
       let current_hour = hourdate.getHours();
-      current_hour=current_hour+1;
-      if (current_hour>=24){
-        current_hour=0;
+      current_hour = current_hour + 1;
+      if (current_hour >= 24) {
+        current_hour = 0;
       }
 
       return {
@@ -28,9 +28,9 @@ class MyApp extends Homey.App {
     minutecard.registerRunListener(async (args) => {
       let minutedate = new Date();
       let current_minute = minutedate.getMinutes();
-     // current_hour=current_hour+1;
-     // if (current_hour>=24){
-     //   current_hour=0;
+      // current_hour=current_hour+1;
+      // if (current_hour>=24){
+      //   current_hour=0;
       //}
 
       return {
@@ -42,7 +42,7 @@ class MyApp extends Homey.App {
     secondcard.registerRunListener(async (args) => {
       let seconddate = new Date();
       let current_second = seconddate.getSeconds();
-     
+
       return {
         Current_second_output: current_second
       }
@@ -50,25 +50,63 @@ class MyApp extends Homey.App {
 
     const unixtimecard = this.homey.flow.getActionCard('Unix_Time_As_A_Number');
     unixtimecard.registerRunListener(async (args) => {
-      
+
       return {
         Current_unix_time_output: Date.now()
       }
     })
-  const hour12card = this.homey.flow.getActionCard('hour_12_clock_As_A_Number');
+    const hour12card = this.homey.flow.getActionCard('hour_12_clock_As_A_Number');
     hour12card.registerRunListener(async (args) => {
       let hour12date = new Date();
       let current_hour12 = hour12date.getHours();
       let period = "am";
-      current_hour12=current_hour12+1;
-      if (current_hour12>12){
-        period="pm";
-        current_hour12=current_hour12-12;
+      current_hour12 = current_hour12 + 1;
+      if (current_hour12 > 12) {
+        period = "pm";
+        current_hour12 = current_hour12 - 12;
       }
 
       return {
         Current_12_hour_output: current_hour12,
         Current_period_output: period
+      }
+    })
+
+    const weekday_scard = this.homey.flow.getActionCard('Weekday_S_As_A_Number');
+    weekday_scard.registerRunListener(async (args) => {
+      let weekday_sdate = new Date();
+      let current_weekday_s = weekday_sdate.getDay();
+
+      return {
+        Current_weekday_s_output: current_weekday_s
+      }
+    })
+
+    const weekday_mcard = this.homey.flow.getActionCard('Weekday_M_As_A_Number');
+    weekday_mcard.registerRunListener(async (args) => {
+      let weekday_mdate = new Date();
+      let current_weekday_m = weekday_mdate.getDay();
+      if (current_weekday_m == 0) { current_weekday_m = 6 }
+      else if (current_weekday_m == 1) { current_weekday_m = 0 }
+      else if (current_weekday_m == 2) { current_weekday_m = 1 }
+      else if (current_weekday_m == 3) { current_weekday_m = 2 }
+      else if (current_weekday_m == 4) { current_weekday_m = 3 }
+      else if (current_weekday_m == 5) { current_weekday_m = 4 }
+      else if (current_weekday_m == 6) { current_weekday_m = 5 }
+
+      return {
+        Current_weekday_m_output: current_weekday_m
+      }
+    })
+
+
+    const dayofmonthcard = this.homey.flow.getActionCard('Day_of_month_As_A_Number');
+    dayofmonthcard.registerRunListener(async (args) => {
+      let dayofmonthdate = new Date();
+      let current_dayofmonth = dayofmonthdate.getDate();
+
+      return {
+        Current_day_of_month_output: current_dayofmonth
       }
     })
   }

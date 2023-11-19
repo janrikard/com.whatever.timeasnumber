@@ -1,0 +1,21 @@
+{
+  "id": "Day_of_month_As_A_Number",
+  "title": {
+    "en": "Day of month as a number"
+  },
+  "hint": {
+    "en": "Return a tag with current day of month as a number"
+  },
+  "tokens": [
+    {
+      "name": "Current_day_of_month_output",
+      "type": "number",
+      "title": {
+        "en": "Current day of month"
+      },
+      "example": {
+        "en": "3"
+      }
+    }
+  ]
+}

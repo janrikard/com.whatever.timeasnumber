@@ -1,0 +1,17 @@
+{
+  "id": "Weekday_M_As_A_Number",
+  "title": {
+    "en": "Weekday as a number (Monday as 0)"
+  },
+  "hint": {
+    "en": "Return a tag with current weekday as a number(Monday=0)"
+  }, 
+  "tokens":[
+    {
+      "name": "Current_weekday_m_output",
+      "type": "number",
+      "title": { "en": "Current weekday" },
+      "example": { "en": "3" }
+    }
+  ]
+}
